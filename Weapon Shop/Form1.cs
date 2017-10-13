@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Weapon_Shop
 {
-    public partial class Form1 : Form
+    public partial class form1 : Form
     {
         //Global Constants
         const double CLAYMORE_PRICE = 250.00;
-        const double TAX = 0.13;
+        const double TAX = 1.13;
         const double GLADIUS_PRICE = 175.00;
         const double KHOPESH_PRICE = 215.00;
         const double KATANA_PRICE = 190.00;
@@ -24,18 +24,39 @@ namespace Weapon_Shop
         int gladius;
         int khopesh;
         int katana;
-        double totalprice;
+        double totalPrice;
 
-        public Form1()
+        public form1()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            claymore = Convert.ToInt16(clayInput.Text);
+            try
+            {
+                //Inputs
+                claymore = Convert.ToInt16(clayInput.Text);
+                gladius = Convert.ToInt16(gladInput.Text);
+                katana = Convert.ToInt16(katanInput.Text);
+                khopesh = Convert.ToInt16(khoInput.Text);
 
+                //Calculations
+                totalPrice = CLAYMORE_PRICE + (TAX * claymore);
+                totalPrice = GLADIUS_PRICE + (TAX * gladius);
+                totalPrice = KHOPESH_PRICE + (TAX * khopesh);
+                totalPrice = KATANA_PRICE + (TAX * katana);
+
+                //Outputs
+                outputLabel.Text = "The price of your sword(s) is:" + totalPrice.ToString("C");
+            }
+            catch
+            {
+                outputLabel.Text = "Ouch! You stabbed me";
+            }
         }
+
+        
     }
 }
         
