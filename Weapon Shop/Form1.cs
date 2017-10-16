@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Weapon shop by Marshall Park, October 16th 2017
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +25,10 @@ namespace Weapon_Shop
         int gladius;
         int khopesh;
         int katana;
+        double totalclayPrice;
+        double totalgladPrice;
+        double totalkhoPrice;
+        double totalkatPrice;
         double totalPrice;
 
         public form1()
@@ -42,10 +47,11 @@ namespace Weapon_Shop
                 khopesh = Convert.ToInt16(khoInput.Text);
 
                 //Calculations
-                totalPrice = CLAYMORE_PRICE + (TAX * claymore);
-                totalPrice = GLADIUS_PRICE + (TAX * gladius);
-                totalPrice = KHOPESH_PRICE + (TAX * khopesh);
-                totalPrice = KATANA_PRICE + (TAX * katana);
+                totalclayPrice = CLAYMORE_PRICE + (TAX * claymore);
+                totalgladPrice = GLADIUS_PRICE + (TAX * gladius);
+                totalkhoPrice = KHOPESH_PRICE + (TAX * khopesh);
+                totalkatPrice = KATANA_PRICE + (TAX * katana);
+                totalPrice = totalclayPrice + totalgladPrice + totalkhoPrice + totalkatPrice;
 
                 //Outputs
                 outputLabel.Text = "The price of your sword(s) is:" + totalPrice.ToString("C");
