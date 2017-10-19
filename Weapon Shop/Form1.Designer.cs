@@ -39,6 +39,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.outputLabel = new System.Windows.Forms.Label();
+            this.printR = new System.Windows.Forms.Button();
+            this.receiptLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // checkOut
@@ -143,11 +145,33 @@
             this.outputLabel.TabIndex = 10;
             this.outputLabel.Text = ".";
             // 
+            // printR
+            // 
+            this.printR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.printR.Location = new System.Drawing.Point(428, 27);
+            this.printR.Name = "printR";
+            this.printR.Size = new System.Drawing.Size(134, 35);
+            this.printR.TabIndex = 11;
+            this.printR.Text = "Print Receipt";
+            this.printR.UseVisualStyleBackColor = true;
+            this.printR.Click += new System.EventHandler(this.printR_Click);
+            // 
+            // receiptLabel
+            // 
+            this.receiptLabel.AutoSize = true;
+            this.receiptLabel.Location = new System.Drawing.Point(405, 90);
+            this.receiptLabel.Name = "receiptLabel";
+            this.receiptLabel.Size = new System.Drawing.Size(16, 13);
+            this.receiptLabel.TabIndex = 12;
+            this.receiptLabel.Text = " . ";
+            // 
             // form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 415);
+            this.Controls.Add(this.receiptLabel);
+            this.Controls.Add(this.printR);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -178,6 +202,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label outputLabel;
+        private System.Windows.Forms.Button printR;
+        private System.Windows.Forms.Label receiptLabel;
     }
 }
 
