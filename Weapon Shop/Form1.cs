@@ -64,8 +64,8 @@ namespace Weapon_Shop
 
         private void printR_Click(object sender, EventArgs e)
         {
-            receiptLabel.Text = "Claymore:" + totalclayPrice.ToString("C") + "Gladius:" + totalgladPrice.ToString("C") 
-                + totalkhoPrice.ToString("C") + totalkatPrice.ToString("C") + totalPrice.ToString("C")
+            receiptLabel.Text = "Claymore:" + totalclayPrice.ToString("C") + "Gladius:" + totalgladPrice.ToString("C")
+                + "Khopesh:" + totalkhoPrice.ToString("C") + "Katana:" + totalkatPrice.ToString("C") + "Total:" + totalPrice.ToString("C");
 
         }
     }

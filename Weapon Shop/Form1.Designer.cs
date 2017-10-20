@@ -158,10 +158,9 @@
             // 
             // receiptLabel
             // 
-            this.receiptLabel.AutoSize = true;
-            this.receiptLabel.Location = new System.Drawing.Point(405, 90);
+            this.receiptLabel.Location = new System.Drawing.Point(398, 90);
             this.receiptLabel.Name = "receiptLabel";
-            this.receiptLabel.Size = new System.Drawing.Size(16, 13);
+            this.receiptLabel.Size = new System.Drawing.Size(191, 288);
             this.receiptLabel.TabIndex = 12;
             this.receiptLabel.Text = " . ";
             // 
